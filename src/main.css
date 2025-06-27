@@ -1,0 +1,52 @@
+html {
+	min-height: 100dvh;
+}
+
+body {
+	min-height: 100dvh;
+	margin: 0;
+	font-family: system-ui, sans-serif;
+	background: #f7f798;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	place-content: center;
+}
+
+.project {
+	padding: 2rem 4rem;
+	border-radius: 7px;
+	margin: auto;
+	max-width: 768px;
+	background: #fefefc;
+	border: 1px solid #eaead9;
+	box-shadow:
+		1px 1px #dadaa9,
+		2px 2px #dadaa9,
+		3px 3px #dadaa9;
+}
+
+.new-action {
+	display: flex;
+	input,
+	button {
+		appearance: none;
+		background: white;
+		border: 1px solid black;
+		padding: 0.25rem 0.5rem;
+	}
+	input {
+		border-right: 0;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+	button {
+		border-top-right-radius: 12px;
+		border-bottom-right-radius: 12px;
+	}
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
