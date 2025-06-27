@@ -1,0 +1,12 @@
+"$schema" = "https://schemastore.netlify.app/netlify-toml.json"
+
+[build]
+environment = { NODE_OPTIONS = "--max-old-space-size=4096" }
+command = "pnpm mk"
+publish = "app/output"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
