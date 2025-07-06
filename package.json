@@ -20,8 +20,6 @@
 		"@codemirror/state": "^6.5.2",
 		"@codemirror/view": "^6.38.0",
 		"@lezer/highlight": "^1.2.1",
-		"@netlify/blobs": "^10.0.3",
-		"@netlify/vite-plugin": "^2.2.3",
 		"@types/debug": "^4.1.12",
 		"debug": "^4.4.1",
 		"solid-automerge": "^1.0.10",
