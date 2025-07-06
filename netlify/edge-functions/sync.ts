@@ -18,12 +18,10 @@ import { initSyncState } from "@automerge/automerge/slim";
 const docStore = getStore({
   name: "autosync-docs",
   consistency: "strong",
-  siteID: "5142446f-ae99-4362-a2ba-acc04654120a",
 });
 const syncStore = getStore({
   name: "autosync-sync",
   consistency: "strong",
-  siteID: "5142446f-ae99-4362-a2ba-acc04654120a",
 });
 
 let init: (() => Promise<void>) & { done?: boolean } = async () => {
