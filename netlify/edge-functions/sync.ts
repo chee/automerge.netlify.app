@@ -83,6 +83,7 @@ export default async (request: Request, context: Context) => {
           type: "json",
         }),
       );
+      docStore.set(documentId!, Automerge.save(nextDoc).buffer as ArrayBuffer);
       outgoing.push({
         type: "sync",
         senderId,
