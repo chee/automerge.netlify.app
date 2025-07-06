@@ -21,8 +21,8 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
       '@chee/automerge-repo-storage-netlify-blobs':
-        specifier: 1.0.0-experimental.2
-        version: 1.0.0-experimental.2
+        specifier: 1.0.0-experimental.3
+        version: 1.0.0-experimental.3
       '@codemirror/commands':
         specifier: ^6.8.1
         version: 6.8.1
@@ -38,12 +38,18 @@ importers:
       '@lezer/highlight':
         specifier: ^1.2.1
         version: 1.2.1
+      '@netlify/blobs':
+        specifier: ^10.0.3
+        version: 10.0.3
       '@netlify/vite-plugin':
         specifier: ^2.2.3
         version: 2.2.3(rolldown-vite@6.3.19(@types/node@24.0.1)(esbuild@0.25.5)(jiti@2.4.2))(rollup@4.40.0)
-      automerge-repo-solid-primitives:
-        specifier: 2.0.0-beta.14
-        version: 2.0.0-beta.14(@automerge/automerge-repo@2.0.1)(solid-js@1.9.5)
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
+      debug:
+        specifier: ^4.4.1
+        version: 4.4.1
       solid-automerge:
         specifier: ^1.0.10
         version: 1.0.10(solid-js@1.9.5)
@@ -221,8 +227,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@chee/automerge-repo-storage-netlify-blobs@1.0.0-experimental.2':
-    resolution: {integrity: sha512-Z/QBxg9n0L1+oddk4pWfOuFyrzCjmpjCBY0LX7g6hxY7Bz/lizAEdBQE5p+ihOtxOYTzZaDrtmpP+tTHtX0BGQ==}
+  '@chee/automerge-repo-storage-netlify-blobs@1.0.0-experimental.3':
+    resolution: {integrity: sha512-xNNFQa+TGK4aTq8hnVetl2M2Ekk+Bnsdzb2ze+mkm5ggQv0DkVU/slo0Qf6D6XA6AKEP/O9nj43up19yhuLroA==}
 
   '@codemirror/autocomplete@6.18.6':
     resolution: {integrity: sha512-PHHBXFomUs5DF+9tCOM/UoW6XQ4R44lLNNhRaW9PKPTU0D7lIjRg3ElxaJnTwsl/oHiR93WSXDBrekhoUGCPtg==}
@@ -597,6 +603,10 @@ packages:
     resolution: {integrity: sha512-+sECjk88bi+USJ89XmiwWJOrJ5m7qgajhmUYzb1kD25NLZN9AxfewlHlnm2T5iIB9wEZ0XqSr65ycqWxX4SE1A==}
     engines: {node: ^14.16.0 || >=16.0.0}
 
+  '@netlify/blobs@10.0.3':
+    resolution: {integrity: sha512-edfIKZTkKMKU00/L7u86jR14RrV7NyJBtxSEWLdtY1t2sxFprJgVJNIqPWXPF/LRvTCfNqmvyxkLvB2mbPA0aQ==}
+    engines: {node: ^14.16.0 || >=16.0.0}
+
   '@netlify/blobs@8.2.0':
     resolution: {integrity: sha512-9djLZHBKsoKk8XCgwWSEPK9QnT8qqxEQGuYh48gFIcNLvpBKkLnHbDZuyUxmNemCfDz7h0HnMXgSPnnUVgARhg==}
     engines: {node: ^14.16.0 || >=16.0.0}
@@ -612,6 +622,10 @@ packages:
 
   '@netlify/dev-utils@3.2.0':
     resolution: {integrity: sha512-5QPVts2j7RHMNVPVB7E28TC564TarS2JDTfMzKGzCrAY35bvOcfJ60Hhp8DOVjI13+BJgN37srUJP4OBDIXCfg==}
+    engines: {node: ^18.14.0 || >=20}
+
+  '@netlify/dev-utils@3.2.2':
+    resolution: {integrity: sha512-ECz/xEaqhAPUoFkeC2Ofpky1HBEKwPCsAL66iK/dLFHUFs39SC3y6Bn5QY76DzONmt+RjWmoYkSIEhJ1xAWHfA==}
     engines: {node: ^18.14.0 || >=20}
 
   '@netlify/dev@4.2.2':
@@ -1005,6 +1019,9 @@ packages:
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
 
+  '@types/debug@4.1.12':
+    resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
+
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
@@ -1019,6 +1036,9 @@ packages:
 
   '@types/mime@1.3.5':
     resolution: {integrity: sha512-/pyBZWSLD2n0dcHE3hq8s8ZvcETHtEuF+3E7XVt0Ig2nvsVQXdghHVcEkIWjy9A0wKfTn97a/PSDYohKIlnP/w==}
+
+  '@types/ms@2.1.0':
+    resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
   '@types/node@22.15.31':
     resolution: {integrity: sha512-jnVe5ULKl6tijxUhvQeNbQG/84fHfg+yMak02cT8QVhBx/F05rAVxCGBYYTh2EKz22D6JF5ktXuNwdx7b9iEGw==}
@@ -1198,13 +1218,6 @@ packages:
   async@3.2.6:
     resolution: {integrity: sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA==}
 
-  automerge-repo-solid-primitives@2.0.0-beta.14:
-    resolution: {integrity: sha512-hffFgSHmy1mOB1UY3syqj0w+zH1GmJdl/xvZFJYu+xOUnLWFTQg3nfMnGSr90K9fVCRa9oU/fu/R1iqysZOiJA==}
-    deprecated: ✨ renamed to solid-automerge. use that! 💞
-    peerDependencies:
-      '@automerge/automerge-repo': 2.0.0-alpha.22
-      solid-js: ^1.9.4
-
   b4a@1.6.7:
     resolution: {integrity: sha512-OnAYlL5b7LEkALw87fUVafQw5rVR9RjwGd4KUwNQ6DrrNmaVaUCgLipfVlzrPQ4tWOR9P0IXGNOx50jYCCdSJg==}
 
@@ -1287,9 +1300,6 @@ packages:
   bytes@3.1.2:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
     engines: {node: '>= 0.8'}
-
-  cabbages@0.1.0:
-    resolution: {integrity: sha512-sAGTxqsLyTHAXM2T3mTKdIwJPqczswCuToYlQdytO5m2zYAgT4RbTLn1R5IjIuwUPm2+kzLDxHPo12kWYBURVA==}
 
   cabbages@0.2.8:
     resolution: {integrity: sha512-MGBoLf3n7crhRIRgQJ3kg6o1VZqsrWVD1E2+I87PP9QBQ70k7x+9c6Ybld8M1sMFYkdqzxD1GupSa1/BuSgg8g==}
@@ -1485,8 +1495,8 @@ packages:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
 
-  debug@4.4.0:
-    resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
+  debug@4.4.1:
+    resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -3222,7 +3232,7 @@ snapshots:
   '@automerge/automerge-repo-network-messagechannel@2.0.1':
     dependencies:
       '@automerge/automerge-repo': 2.0.1
-      debug: 4.4.0
+      debug: 4.4.1
       eventemitter3: 5.0.1
     transitivePeerDependencies:
       - supports-color
@@ -3231,7 +3241,7 @@ snapshots:
     dependencies:
       '@automerge/automerge-repo': 2.0.1
       cbor-x: 1.6.0
-      debug: 4.4.0
+      debug: 4.4.1
       eventemitter3: 5.0.1
       isomorphic-ws: 5.0.0(ws@8.18.2)
       ws: 8.18.2
@@ -3251,7 +3261,7 @@ snapshots:
       '@automerge/automerge': 3.0.0-beta.4
       bs58check: 3.0.1
       cbor-x: 1.6.0
-      debug: 4.4.0
+      debug: 4.4.1
       eventemitter3: 5.0.1
       fast-sha256: 1.3.0
       uuid: 9.0.1
@@ -3294,7 +3304,7 @@ snapshots:
       '@babel/traverse': 7.27.0
       '@babel/types': 7.27.0
       convert-source-map: 2.0.0
-      debug: 4.4.0
+      debug: 4.4.1
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -3380,7 +3390,7 @@ snapshots:
       '@babel/parser': 7.27.0
       '@babel/template': 7.27.0
       '@babel/types': 7.27.0
-      debug: 4.4.0
+      debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -3413,7 +3423,7 @@ snapshots:
   '@cbor-extract/cbor-extract-win32-x64@2.2.0':
     optional: true
 
-  '@chee/automerge-repo-storage-netlify-blobs@1.0.0-experimental.2':
+  '@chee/automerge-repo-storage-netlify-blobs@1.0.0-experimental.3':
     dependencies:
       '@netlify/blobs': 8.2.0
       '@types/express': 5.0.3
@@ -3745,6 +3755,11 @@ snapshots:
       '@netlify/dev-utils': 3.2.0
       '@netlify/runtime-utils': 2.1.0
 
+  '@netlify/blobs@10.0.3':
+    dependencies:
+      '@netlify/dev-utils': 3.2.2
+      '@netlify/runtime-utils': 2.1.0
+
   '@netlify/blobs@8.2.0': {}
 
   '@netlify/cache@3.0.3':
@@ -3790,6 +3805,24 @@ snapshots:
       js-image-generator: 1.0.4
       lodash.debounce: 4.0.8
       parse-gitignore: 2.0.0
+      uuid: 11.1.0
+      write-file-atomic: 5.0.1
+
+  '@netlify/dev-utils@3.2.2':
+    dependencies:
+      '@whatwg-node/server': 0.10.10
+      ansis: 4.1.0
+      chokidar: 4.0.3
+      decache: 4.6.2
+      dot-prop: 9.0.0
+      env-paths: 3.0.0
+      find-up: 7.0.0
+      image-size: 2.0.2
+      js-image-generator: 1.0.4
+      lodash.debounce: 4.0.8
+      parse-gitignore: 2.0.0
+      semver: 7.7.2
+      tmp-promise: 3.0.3
       uuid: 11.1.0
       write-file-atomic: 5.0.1
 
@@ -3938,7 +3971,7 @@ snapshots:
 
   '@netlify/runtime@4.0.4':
     dependencies:
-      '@netlify/blobs': 10.0.0
+      '@netlify/blobs': 10.0.3
       '@netlify/cache': 3.0.3
       '@netlify/runtime-utils': 2.1.0
       '@netlify/types': 2.0.2
@@ -4254,6 +4287,10 @@ snapshots:
     dependencies:
       '@types/node': 24.0.1
 
+  '@types/debug@4.1.12':
+    dependencies:
+      '@types/ms': 2.1.0
+
   '@types/estree@1.0.7': {}
 
   '@types/express-serve-static-core@5.0.6':
@@ -4272,6 +4309,8 @@ snapshots:
   '@types/http-errors@2.0.5': {}
 
   '@types/mime@1.3.5': {}
+
+  '@types/ms@2.1.0': {}
 
   '@types/node@22.15.31':
     dependencies:
@@ -4315,7 +4354,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.34.0(typescript@5.8.3)
       '@typescript-eslint/types': 8.34.0
-      debug: 4.4.0
+      debug: 4.4.1
       typescript: 5.8.3
     transitivePeerDependencies:
       - supports-color
@@ -4332,7 +4371,7 @@ snapshots:
       '@typescript-eslint/tsconfig-utils': 8.34.0(typescript@5.8.3)
       '@typescript-eslint/types': 8.34.0
       '@typescript-eslint/visitor-keys': 8.34.0
-      debug: 4.4.0
+      debug: 4.4.1
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -4502,13 +4541,6 @@ snapshots:
 
   async@3.2.6: {}
 
-  automerge-repo-solid-primitives@2.0.0-beta.14(@automerge/automerge-repo@2.0.1)(solid-js@1.9.5):
-    dependencies:
-      '@automerge/automerge-repo': 2.0.1
-      '@solid-primitives/utils': 6.3.0(solid-js@1.9.5)
-      cabbages: 0.1.0
-      solid-js: 1.9.5
-
   b4a@1.6.7: {}
 
   babel-plugin-jsx-dom-expressions@0.39.7(@babel/core@7.26.10):
@@ -4552,7 +4584,7 @@ snapshots:
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 4.4.0
+      debug: 4.4.1
       http-errors: 2.0.0
       iconv-lite: 0.6.3
       on-finished: 2.4.1
@@ -4605,11 +4637,9 @@ snapshots:
 
   bytes@3.1.2: {}
 
-  cabbages@0.1.0: {}
-
   cabbages@0.2.8:
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
 
@@ -4812,7 +4842,7 @@ snapshots:
 
   data-uri-to-buffer@4.0.1: {}
 
-  debug@4.4.0:
+  debug@4.4.1:
     dependencies:
       ms: 2.1.3
 
@@ -5034,7 +5064,7 @@ snapshots:
       content-type: 1.0.5
       cookie: 0.7.2
       cookie-signature: 1.2.2
-      debug: 4.4.0
+      debug: 4.4.1
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
@@ -5060,7 +5090,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.1
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -5119,7 +5149,7 @@ snapshots:
 
   finalhandler@2.1.0:
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.1
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -5257,7 +5287,7 @@ snapshots:
   https-proxy-agent@7.0.6:
     dependencies:
       agent-base: 7.1.3
-      debug: 4.4.0
+      debug: 4.4.1
     transitivePeerDependencies:
       - supports-color
 
@@ -6010,7 +6040,7 @@ snapshots:
 
   router@2.2.0:
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.1
       depd: 2.0.0
       is-promise: 4.0.0
       parseurl: 1.3.3
@@ -6036,7 +6066,7 @@ snapshots:
 
   send@1.2.0:
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.1
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
