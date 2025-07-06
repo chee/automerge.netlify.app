@@ -18,10 +18,14 @@ import { initSyncState } from "@automerge/automerge/slim";
 const docStore = getStore({
   name: "autosync-docs",
   consistency: "strong",
+  siteID: "5142446f-ae99-4362-a2ba-acc04654120a",
+  token: Deno.env.get("NETLIFY_TOKEN"),
 });
 const syncStore = getStore({
   name: "autosync-sync",
   consistency: "strong",
+  siteID: "5142446f-ae99-4362-a2ba-acc04654120a",
+  token: Deno.env.get("NETLIFY_TOKEN"),
 });
 
 let init: (() => Promise<void>) & { done?: boolean } = async () => {
