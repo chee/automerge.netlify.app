@@ -38,6 +38,9 @@ importers:
       '@lezer/highlight':
         specifier: ^1.2.1
         version: 1.2.1
+      '@netlify/blobs':
+        specifier: ^8.2.0
+        version: 8.2.0
       '@types/debug':
         specifier: ^4.1.12
         version: 4.1.12
