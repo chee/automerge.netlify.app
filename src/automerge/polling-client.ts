@@ -65,9 +65,10 @@ export class NetlifyClient extends NetworkAdapter {
 				if (res.ok) {
 					this.#pending.length = 0
 					const bytes = await res.bytes()
+
+					if (bytes.length == 0) return
 					const messages = cbor.decode(bytes) as NetlifyServerMessage[]
 					for (const message of messages) {
-						console.log({message})
 						this.receiveMessage(message)
 					}
 				} else {
