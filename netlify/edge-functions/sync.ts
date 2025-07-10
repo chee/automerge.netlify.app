@@ -1,10 +1,8 @@
 import type { Config, Context } from "@netlify/edge-functions";
-// import { getStore } from "@netlify/blobs";
+
 import { automergeWasmBase64 } from "@automerge/automerge/automerge.wasm.base64";
 import {
-  // Automerge,
   cbor,
-  // type DocumentId,
   initializeBase64Wasm,
   Message,
   NetworkAdapter,
@@ -12,21 +10,8 @@ import {
   PeerMetadata,
   Repo,
 } from "@automerge/vanillajs/slim";
-// import { initSyncState } from "@automerge/automerge/slim";
-import Blobs from "@chee/automerge-repo-storage-netlify-blobs";
 
-// const docStore = getStore({
-//   name: "autosync-doc1",
-//   consistency: "strong",
-//   siteID: "5142446f-ae99-4362-a2ba-acc04654120a",
-//   token: Deno.env.get("NETLIFY_TOKEN"),
-// });
-// const syncStore = getStore({
-//   name: "autosync-sync1",
-//   consistency: "strong",
-//   siteID: "5142446f-ae99-4362-a2ba-acc04654120a",
-//   token: Deno.env.get("NETLIFY_TOKEN"),
-// });
+import Blobs from "@chee/automerge-repo-storage-netlify-blobs";
 
 let repo: Repo;
 const init: (() => Promise<void>) & { done?: boolean } = async () => {
@@ -37,11 +22,10 @@ const init: (() => Promise<void>) & { done?: boolean } = async () => {
     storage: new Blobs({
       name: "autoauto",
     }),
+    peerId: "edge" as PeerId,
   });
 };
 
-// const senderId = "edge-function" as PeerId;
-const senderId = Math.random().toString() as PeerId;
 export default async function handle(request: Request, context: Context) {
   await init();
 
@@ -59,14 +43,16 @@ export default async function handle(request: Request, context: Context) {
         this.peerId = peerId;
         this.peerMetadata = peerMetadata;
         let remotePeerId: PeerId = "" as PeerId;
-        let remotePeerMetadata: PeerMetadata = {};
+        let remotePeerMetadata: PeerMetadata | undefined = undefined;
 
         for (const msg of incoming) {
           remotePeerId = msg.senderId;
-          remotePeerMetadata ??= msg.peerMetadata;
+          remotePeerMetadata ??= "peerMetadata" in msg
+            ? msg.peerMetadata
+            : undefined;
           this.emit("peer-candidate", {
             peerId: remotePeerId,
-            peerMetadata: remotePeerMetadata,
+            peerMetadata: remotePeerMetadata!,
           });
           if (isHelloFromClient(msg)) {
             outgoing.push(
@@ -88,7 +74,6 @@ export default async function handle(request: Request, context: Context) {
           peerId: remotePeerId,
         });
 
-        // messages.length = 0;
         resolve(
           new Response(cbor.encode(outgoing)),
         );
@@ -107,8 +92,6 @@ export default async function handle(request: Request, context: Context) {
       }
     })(),
   );
-
-  // return new Response(cbor.encode(outgoing));
 
   return promise;
 }
